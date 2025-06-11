@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Button</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Arial', sans-serif;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tribute page</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(to bottom, #f0f4f8, #d3dfe8);
+                margin: 0;
+                padding: 0;
+                color: #333;
+                line-height: 1.6;
+                text-align: center;
+            }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      animation: backgroundAnimation 5s infinite alternate;
-    }
+            .nav {
+                background-color: #2c3e50;
+                color: white;
+                margin: 0;
+                padding: 1rem;
+                font-size: 24px;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+            }
 
-    .neon-button {
-      padding: 30px 50px;
-      font-size: 30px;
-      color: #fff;
-      background-color: #222;
-      border: 2px solid #fff;
-      border-radius: 20px;
-      cursor: pointer;
-      outline: none;
-      position: relative;
-      box-shadow: 0 0 20px rgba(0, 255, 200, 0.8);
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-      transform: scale(1); 
-    }
+            .nav:hover {
+                background-color: #34495e;
+                cursor: pointer;
+            }
 
-    .neon-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: black;
-      filter: blur(5px);
-      z-index: -1;
-    }
+            img {
+                width: 25vw;
+                height: 20vw;
+                box-shadow: -1px -6px 20px rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
 
-    .neon-button:hover {
-      background-color: black;
-      color: rgba(255, 255, 255, 0.8);
-      border: 2px solid rgba(0, 255, 200, 0.8);
-      box-shadow: 0 0 30px rgba(0, 255, 200, 0.8), 0 0 60px rgba(0, 255, 200, 0.8), 0 0 80px rgba(0, 255, 200, 0.8);
-      transform: scale(1.1);
-      letter-spacing: 1px; 
-    }
+            img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            }
 
-    @keyframes backgroundAnimation {
-      0% {
-        background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 0));
-      }
-      100% {
-        background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 0));
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <button class="neon-button">Click Me!</button>
-</div>
-</body>
+            .container {
+                margin-top: 5vw;
+                padding: 20px;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+
+            .APJ {
+                font-size: 1.1rem;
+                color: #555;
+                margin-top: 20px;
+                line-height: 1.8;
+                text-align: justify;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+                padding: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+                animation: fadeIn 2s ease-in;
+            }
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
+            .container img {
+                margin-bottom: 20px;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .footer {
+                margin-top: 50px;
+                padding: 10px;
+                background-color: #2c3e50;
+                color: white;
+                text-align: center;
+                font-size: 1rem;
+                border-radius: 5px;
+                box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <nav>
+                TRIBUTE PAGE OF APJ ABDUL KALAM
+            </nav>
+        </div>
+        <div class="container">
+            <h1>Dr. A.P.J. Abdul Kalam</h1>
+            <img src="img.webp" alt="APJ ABDUL KALAM">
+            <p class="APJ">
+                Dr. A.P.J. Abdul Kalam (1931–2015)
+                Dr. Avul Pakir Jainulabdeen Abdul Kalam was an Indian aerospace
+                scientist, author, and the 11th President of India (2002–2007).
+                Known as the “Missile Man of India”, he played a major role in
+                developing India's missile and nuclear programs.
+
+                Born on October 15, 1931, in Rameswaram, Tamil Nadu, he came
+                from a humble background and rose to become one of India's most
+                respected and loved figures. He worked with ISRO and DRDO, where he led
+                projects like the Agni and Prithvi missiles.
+
+                As President, he was known for being people’s president, especially
+                inspiring the youth of India with his speeches and books like “Wings
+                of Fire” and “Ignited Minds”. Even after his presidency, he remained
+                active in education and youth development.
+
+                He passed away on July 27, 2015, while delivering a lecture at
+                IIM Shillong — doing what he loved most: teaching and inspiring.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Dr. A.P.J. Abdul Kalam Tribute Page. All rights reserved.</p>
+        </div>
+    </body>
 </html>
-
